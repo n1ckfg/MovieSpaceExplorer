@@ -1,0 +1,15 @@
+title: "cube.gif"
+
+description: "Volume Rendering and Slicing Gifs"
+
+# Build settings
+markdown: kramdown
+
+exclude: [
+    "documentation",
+    "node_modules",
+    "process_data",
+    "server",
+    "src",
+    "webpack.config.js"
+]

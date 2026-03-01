@@ -1,0 +1,123 @@
+.gif-renderer {
+    display: flex;
+    width: 100%;
+    user-select: none;
+    margin-bottom: 2.4em;
+
+    .three-container {
+        width: 70%;
+        border: 1px solid $text-color;
+        border-left: none;
+    }
+    .slice-container {
+        width: 30%;
+    }
+}
+
+.three-container {
+    position: relative;
+    -webkit-user-select: none;
+    user-select: none;
+    height: 80vh;
+    
+    canvas {
+        width: 100% !important;
+        height: 100% !important;
+    }
+
+    .three-controls {
+        border: 1px solid $text-color;
+        background: rgba(255, 255, 255, 0.85);
+        display: flex;
+        button {
+            display: block;
+            font-size: 10px;
+            padding: 4px 8px;
+            border: none;
+            border-right: 1px solid $text-color
+        }
+
+        button:last-child {
+            border-right: none;
+        }
+    }
+
+    .three-view-controls {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+    }
+
+     .three-ui-controls {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+    }
+
+    .three-obj-control-wrapper {
+        position: absolute;
+        margin: 0 auto;
+        bottom: 10px;
+        left: 0;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+}
+
+.slice-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0.8em 0.2em;
+    text-align: center;
+    height: 80vh;
+
+    h2 {
+        margin-bottom: 0;
+    }
+
+    .slice-canvas {
+        width: 100% !important;
+        height: auto !important;
+        border: 1px solid $text-color;
+        max-height: 100% !important;
+    }
+
+    .slice-properties {
+        font-size: 12px;
+        color: $light-gray;
+
+        .property {
+            display: inline-block;
+            padding: 0 0.6em;
+        }
+
+        .value {
+            font-style: italic;
+        }
+    }
+
+    .export-controls {
+        margin-top: 0.6em;
+    }
+}
+
+
+
+@media only screen and (max-width: 800px) {
+    .gif-renderer {
+        flex-direction: column;
+        align-items: center;
+        .three-container {
+            width: 100%;
+            border-right: none;
+        }
+
+        .slice-container {
+            width: 50%;
+            height: auto;
+            max-height: 70vh;
+        }
+    }
+}

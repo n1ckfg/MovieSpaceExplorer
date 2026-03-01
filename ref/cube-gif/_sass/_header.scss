@@ -1,0 +1,45 @@
+
+#site-header {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+    padding-bottom: 4em;
+    color: $brand-color;
+
+    #site-title {
+        display: block;
+        margin: 0 auto;
+        padding: 0 1rem;
+        margin-top: 2rem;
+        height: auto;
+        max-width: 512px;
+    }
+
+    .links a {
+        color: $light-gray;
+        padding: 0 0.6em;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    #site-header {
+        padding-bottom: 2em;
+     
+        #site-title {
+            max-width: 400px;
+        }
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    #site-header {
+        padding-bottom: 1.4em;
+
+        #site-title {
+            margin-top: 1rem;
+            max-width: 300px;
+        }
+    }
+}
